@@ -4,6 +4,7 @@ An implementation of consistent hashing on a distributed system in Go
 
 
 **Run Program**
+
 To run this program simply type
 ```
 go run con_hash.go
@@ -26,6 +27,7 @@ Adding node: {id:2 hash_1:7 hash_2:26}
 ```
 
 **Put Operations**
+
 For every put(key, value) command you'll see the nodes pringing the put operation
 results with this format:
 ```
@@ -40,6 +42,7 @@ Performing put(key: 'Maria', value: 100) hashes to: 13, got node id: 1
 ```
 
 **Get Operations**
+
 For every get(key) command you'll see the nodes pringing the put operation
 results with this format:
 ```
@@ -54,6 +57,7 @@ Performing get(key: 'Tim') hashes to: 5, got node id: 2
 ```
 
 **Node Death**
+
 Just like adding nodes, node death is fairly straight forward you'll see a node
 receiving and responding to a kill command formatted like this:
 ```
@@ -66,7 +70,8 @@ Node : 0 dies
 note: I use the kill command to intentionally kill a node and then perform a get
 operation afterwards to simulate node death.
 
-**Ring Prints***
+**Ring Prints**
+
 You'll see 2 times that the hash ring itself will be printed, it will simply be an
 array where non hashed locations are '-1' and hashed locations are the id of the
 node that hashes there. Example:
